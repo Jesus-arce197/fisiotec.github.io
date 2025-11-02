@@ -1,0 +1,338 @@
+:root
+{
+    --verde:#24C942;
+    --azul: #22AAD4;
+    --blanco: #ffffff;
+    --gris: #E6E6E6;
+
+}
+
+html
+{
+    background-color: var(--blanco);
+    font-size: 62.5%;
+}
+
+body
+{
+    background-color: var(--blanco);
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedor_principal
+{
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.contenedor_mano
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contenedor_mano a
+{
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+
+nav
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+}
+
+nav a
+{
+    margin: 0 15px;
+    font-size: 1.6rem;
+}
+
+a
+{
+    text-decoration:none;
+    color: var(--azul);
+}
+
+h1
+{
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--azul);
+}
+
+p
+{
+    text-transform: uppercase;
+    color: var(--verde);
+    font-weight: bold;
+}
+
+h2,h3,h4
+{
+    text-transform: uppercase;
+    color: var(--azul);
+}
+
+/*clase de la 1ra imagen*/
+
+.engranage
+{
+    width: 200px;
+}
+
+.gif
+{
+    width: 200px ;
+    display: flex;
+    align-items: center;
+}
+
+.crear
+{
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+
+
+.citas
+{
+    width:400px;
+}
+
+footer p
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+}
+
+/* AQUI INICIA EL CODIGO CSS DEL FORMULARIO*/
+
+.body_formulario
+{
+    background-color: var(--gris);
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+
+.contenedor_formulario
+{
+    max-width: 500px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    padding: 50px;
+}
+
+
+
+.formulario form
+{
+    gap: 15px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.formulario form label
+{
+    font-weight: bold;
+    color: var(--verde);
+    text-transform: uppercase;
+    display: block;
+}
+
+.formulario form input[type="text"],
+.formulario form input[type="number"],
+.formulario form input[type="email"],
+.formulario form input[type="date"],
+.formulario form input[type="time"]
+{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--gris);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 20px;
+    color: var(--verde);
+    transition: border-color 0.3 ease;
+}
+
+.formulario form button
+{
+    width: 100%;
+    padding: 15px;
+    background-color: var(--verde);
+    border: none;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.sexo
+{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
+
+
+/* Aqui inicia el css de la pagina seguimiento.html*/
+
+.inicio-tratamiento 
+{
+    text-align: center;
+    padding: 30px 0;
+}
+
+.gif-emoji 
+{
+    width: 150px;
+    height: 150px;
+}
+
+.seccion-diagnosticos 
+{
+    padding: 30px 0;
+}
+
+.seccion-diagnosticos h2 
+{
+    text-align: center;
+    color: var(--verde);
+    margin-bottom: 30px;
+}
+
+.diagnostico-item 
+{
+    display: flex;         
+    align-items: center;  
+    gap: 30px;          
+    background-color: var(--blanco);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;   
+}
+
+.diagnostico-info 
+{
+    flex: 1; 
+}
+
+.diagnostico-video 
+{
+    flex: 1; 
+}
+
+
+.diagnostico-video iframe 
+{
+    width: 100%; 
+    height: 300px; 
+    border-radius: 5px;
+}
+
+
+
+
+.logo-info 
+{
+    width: 100%;
+    max-width: 300px; /* Controla el tamaño máximo */
+    height: auto;
+    margin: 0 auto; /* Centra la imagen en su columna */
+}
+
+.seccion-info
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/*aqui el codigo del javascrip?*/
+
+#contenedor-qr img {
+    display: block !important;
+    width: 250px !important;
+    height: 250px !important;
+    
+    /* (Opcional) Añade esto para estar 100% seguros de que está ahí */
+    border: 5px solid red; 
+}
+
+/*codigo de mediaqueris*/
+
+/* --- MEDIA QUERIES PARA MÓVILES --- */
+/* (Cuando la pantalla sea de 768px o menos) */
+
+@media (max-width: 768px) {
+
+    /* 1. Arregla el Header (apila el logo y la nav) */
+    .site-header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .main-nav {
+        /* (Opcional) Si los enlaces no caben, los apila */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    /* 2. Arregla el layout de 2 columnas (Fisio/Info) */
+    .fisio-layout {
+        flex-direction: column; /* Apila la info y el form */
+    }
+
+    .info-contenido {
+        flex-direction: column; /* Apila texto e imágenes */
+    }
+
+    /* 3. Arregla los 3 pasos del Index */
+    .pasos-grid {
+        grid-template-columns: 1fr; /* Cambia de 3 columnas a 1 */
+    }
+    
+    /* 4. Arregla los diagnósticos (Tratamiento) */
+    .diagnostico-item {
+        flex-direction: column; /* Apila el texto y el video */
+    }
+    
+    .diagnostico-video iframe {
+        height: 250px; /* Reduce la altura del video en móviles */
+    }
+
+    /* 5. Mejora la legibilidad */
+    h1 {
+        font-size: 2.8rem; /* Títulos un poco más pequeños */
+    }
+
+    .contenedor_formulario {
+        padding: 25px; /* Menos padding en la tarjeta en móviles */
+    }
+}
