@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Fisioterapeuta</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="body_formulario">
+
+    <div class="contenedor_formulario">
+        
+        <h1>Perfil del Fisioterapeuta</h1>
+        
+        <div class="formulario">
+            <form id="info-fisio">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" readonly>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" readonly>
+
+                <label for="especialidad">Especialidad:</label>
+                <input type="text" id="especialidad" readonly>
+
+                <label for="cedula">Cédula Profesional:</label>
+                <input type="number" id="cedula" readonly>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" readonly>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" readonly>
+                
+                <label for="titulo">Título Profesional:</label>
+                <input type="text" id="titulo" readonly>
+
+                <label for="experiencia">Experiencia:</label>
+                <input type="text" id="experiencia" readonly>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+
+            document.getElementById('nombre').value = params.get('nombre') || '';
+            document.getElementById('apellidos').value = params.get('apellidos') || '';
+            document.getElementById('especialidad').value = params.get('especialidad') || '';
+            document.getElementById('cedula').value = params.get('cedula') || '';
+            document.getElementById('telefono').value = params.get('telefono') || '';
+            document.getElementById('correo').value = params.get('correo') || '';
+            document.getElementById('titulo').value = params.get('titulo') || '';
+            document.getElementById('experiencia').value = params.get('experiencia') || '';
+        });
+    </script>
+</body>
+</html>

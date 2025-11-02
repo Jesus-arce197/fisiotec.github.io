@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <title>Fisioterapeutas</title>
+</head>
+<body class="body_formulario">
+
+        <h1>Fisiotec</h1>
+     <header class="site-header">
+        <div class="container">
+           
+            <nav class="main-nav">
+                <a href="index.html">Inicio</a>
+                <a href="seguimiento.html">Tratamiento</a>
+                <a href="fisio.html">Fisioterapeutas</a>
+                <a href="cuenta.html" class="boton-cta">Crear Cuenta</a>
+            </nav>
+        </div>
+    </header>
+
+   
+
+   <section class="seccion-info">
+        <div class="contenedor_principal">
+                
+                <div class="contenedor_principal">
+                    <div class="info-imagenes">
+                    <img src="img/gif4.gif" alt="pensando" class="gif-emoji">
+                    </div>
+                    <h3>¿Porque usar fisiotec?</h3>
+                    <p>Sirve para eficientizar el flujo de citas y pacientes.</p>
+                    <p>Mejora la atención y el seguimiento de cada paciente.</p>
+                    <p>¡Es facil, rápido y muy eficiente!</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <div class="contenedor_formulario">
+    <div class="formulario">
+
+    <h1>¡Completa el formulario!</h1>
+
+    <form id="formulario-fisio">
+
+        <label for="nombre">Nombre: </label>
+        <input type="text" id="nombre" name="nombre_usuario">
+
+        <label for="apellidos">Apellidos: </label>
+        <input type="text" id="apellidos" name="apellidos_usuario">
+
+        <label for="especialidad">Especialidad: </label>
+        <input type="text" id="especialidad" name="especialidad">
+
+        <label for="cedula">Cedula profesional:</label>
+        <input type="number" id="cedula" name="cedula">
+
+        <label for="telefono">Telefono:</label>
+        <input type="text" id="telefono" name="telefono">
+
+        <label for="correo">Correo: </label>
+        <input type="email" id="correo" name="correo">
+
+        <label for="titulo">Titulo profesional:</label>
+        <input type="text" id="titulo" name="titulo">
+
+        <label for="experiencia">Experiencia:</label>
+        <input type="text" id="experiencia" name="experiencia">
+
+        
+
+        <input type="submit" value="ENVIAR" class="boton_enviar">
+
+    </form>
+    </div>
+
+     <div id="contenedor-qr-fisio"></div>
+
+    </div>
+    
+        
+   
+
+</div>
+       
+
+      <footer>
+        <p>&copy; <span id="año"> </span> Jesús Arce Aguila || Fisiotec</p>
+        <p>Todos los derechos reservados.</p>
+        <script>
+            document.getElementById(`año`).textContent=new Date().getFullYear();
+        </script>
+        </footer>
+
+     <script src="js/qrcode.min.js"></script> 
+     <script src="js/app-fisio.js"></script>
+
+
+
+    
+</body>
+</html>

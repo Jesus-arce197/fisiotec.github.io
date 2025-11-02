@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Paciente</title>
+    <link rel="stylesheet" href="css/styles.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body class="body_formulario">
+
+    <div class="contenedor_formulario">
+        
+        <h1>Datos del Paciente</h1>
+        
+        <div class="formulario">
+            <form id="info-paciente">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" readonly>
+
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" readonly>
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" readonly>
+
+                <label for="sexo">Sexo:</label>
+                <input type="text" id="sexo" readonly>
+
+                <label for="estatura">Estatura:</label>
+                <input type="number" id="estatura" readonly>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" readonly>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" readonly>
+                
+                <hr style="border-top: 2px solid var(--verde); margin: 20px 0;">
+
+                <label for="fecha">Fecha de Cita:</label>
+                <input type="text" id="fecha" readonly>
+
+                <label for="hora">Hora de Cita:</label>
+                <input type="text" id="hora" readonly>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+
+            // Rellena los datos personales
+            document.getElementById('nombre').value = params.get('nombre') || '';
+            document.getElementById('apellidos').value = params.get('apellidos') || '';
+            document.getElementById('edad').value = params.get('edad') || '';
+            document.getElementById('sexo').value = params.get('sexo') || '';
+            document.getElementById('estatura').value = params.get('estatura') || '';
+            document.getElementById('telefono').value = params.get('telefono') || '';
+            document.getElementById('correo').value = params.get('correo') || '';
+
+            // Rellena los datos de la cita
+            // Usamos .value (no .textContent) ya que son inputs
+            document.getElementById('fecha').value = params.get('fecha') || '';
+            document.getElementById('hora').value = params.get('hora') || '';
+        });
+    </script>
+</body>
+</html>
